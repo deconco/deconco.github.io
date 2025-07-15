@@ -59,8 +59,13 @@ body {
   .card article p {
     color: white;
     padding-left: 1em;
+    font-size: 1.5em;
+    line-height: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 
   .card article {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
+    height: 12em;
   }
