@@ -46,17 +46,17 @@ body {
   
   .card footer p {
     font-size: 1.5em;
-    line-height: 2.5em;
+    line-height: 2em;
   }
 
   /* Card contents */
   .card article img {
     max-height: 100%;  /* added a missing semicolon */
     height: 12em;
-    background-color: rgba(0,0,0,0.5);
     float: right;
   }
 
   .card article p {
     color: white;
+    background-color: rgba(0,0,0,0.5);
   }
