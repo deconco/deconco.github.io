@@ -6,8 +6,17 @@ body {
   
   html {
     font-family: 'Helvetica neue', Arial, 'sans serif';
-    font-size: 10px;
+    font-size: 10px;  /* this is the base that the relative em units are based on!!! */
     background-color: #ccc;
+  }
+
+  p, h2 {
+    margin: 0%;
+  }
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.5em;
   }
   
   /* Card container */
@@ -30,8 +39,24 @@ body {
     border-radius: 0 0 1.5em 1.5em;
   }
 
+  .card footer, .card header {
+    height: 5em;
+    padding: 1em;
+  }
+  
+  .card footer p {
+    font-size: 1.5em;
+    line-height: 2.5em;
+  }
+
   /* Card contents */
   .card article img {
     max-height: 100%;  /* added a missing semicolon */
+    height: 12em;
+    background-color: rgba(0,0,0,0.5);
     float: right;
+  }
+
+  .card article p {
+    color: white;
   }
