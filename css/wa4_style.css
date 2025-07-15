@@ -46,7 +46,7 @@ body {
   
   .card footer p {
     font-size: 1.5em;
-    line-height: 1.5em;
+    line-height: 1.3em;
   }
 
   /* Card contents */
@@ -59,7 +59,7 @@ body {
   .card article p {
     color: white;
     padding-left: 1em;
-    padding-top: 2em;
+    padding-top: 1.5em;
     font-size: 1em;
     line-height: 1.5em;
   }
