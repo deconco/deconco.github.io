@@ -12,7 +12,7 @@ body {
 }
 
 article {
-  background: url(topimage.png);
+  background: url(../img/top-image.png) no-repeat;
   width: 210mm;
   height: 297mm;
   margin: 20px auto;
