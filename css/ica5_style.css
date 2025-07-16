@@ -42,6 +42,7 @@ h1 {
   padding: 44px 0;
   color: white;
   text-shadow: 1px 1px 1px black;
+  background: url(logo.png);
 }
 
 /* Your CSS below here */
