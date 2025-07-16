@@ -79,7 +79,7 @@ body {
     width: 35em;
     height: 22em;
     margin: 5em auto;
-    background-color: greenyellow; /* removed the 'u' in color - this is en-US!! */
+    background-color: rgb(113, 255, 47); /* removed the 'u' in color - this is en-US!! */
     border: 0.2em solid black;
     border-radius: 1.5em;
   }
