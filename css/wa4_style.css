@@ -80,7 +80,7 @@ body {
     width: 35em;
     height: 22em;
     margin: 5em auto;
-    background-color: red; /* removed the 'u' in color - this is en-US!! */
+    background-color: rgb(2, 204, 9); /* removed the 'u' in color - this is en-US!! */
     border: 0.2em solid black;
     border-radius: 1.5em;
   }
@@ -121,6 +121,10 @@ body {
   }
 
   .my_card article {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
     height: 12em;
+  }
+
+  a:link {
+    color:red;
   }
