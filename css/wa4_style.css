@@ -95,7 +95,7 @@ body {
     border-radius: 0 0 1.5em 1.5em;
   }
 
-  .my_card footer, .card header {
+  .my_card footer, .my_card header {
     height: 3em;
     padding: 1em;
   }
