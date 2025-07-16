@@ -70,8 +70,13 @@ body {
   }
 
 
+
+
+
+/* My card with custom settings */
+
   /* Card container */
-  .card {
+  .my_card {
     width: 35em;
     height: 22em;
     margin: 5em auto;
