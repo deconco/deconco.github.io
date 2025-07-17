@@ -1,14 +1,15 @@
 body {
+    font-size: 10px;
     margin: 0;
     background: url(../img/claire.jpg) no-repeat left top;
   }
 
 h1 {
-    font-size: large;
+    font-size: 3em;
 }
 
 h2 {
-    font-size: medium;
+    font-size: 2em;
 }
   
 
