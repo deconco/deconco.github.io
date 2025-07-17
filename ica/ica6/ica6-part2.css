@@ -5,7 +5,7 @@ body{
 
 #flex-parent{
     background-color: orangered;
-    flex-direction: row;
+    flex-direction: column;
 }
 #flex-parent p{
     padding:5vw;
