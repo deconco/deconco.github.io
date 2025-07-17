@@ -16,12 +16,12 @@ article {
     background: url(../img/claire.jpg) no-repeat left top;
 }
 
-article .dog_info  {
+.dog_info  {
     border: 3mm solid red;
     align-items: center;
 }
 
-article .dog_breed {
+.dog_breed {
     align-items: left;
     border: 5mm dotted blue;
 
