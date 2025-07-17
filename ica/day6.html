@@ -42,6 +42,55 @@
             order: 3;
         }
 
+        .grid {
+        background-color: lightgreen;    
+        height: 500px;
+        width: 500px;
+        margin-top: 10px;
+        border: 5px solid black;
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 2;
+        }
+
+        .grid-child {
+            height: 200px;
+            width: 200px;
+            border: 5px solid black;
+            font-size: 100px;
+            font-family: sans-serif;
+        }
+
+        #g1 {
+            grid-row-start: 0;
+            grid-row-end: 1;
+            grid-column-start: 0;
+            grid-column-end: 1;
+        }
+
+        #g2 {
+            grid-row-start: 0;
+            grid-row-end: 1;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+
+        #g3 {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 0;
+            grid-column-end: 1;
+        }
+
+
+        #g4 {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
     </style>
 </head>
 <body>
@@ -50,6 +99,13 @@
         <div class="fchild" id="second">2</div>
         <div class="fchild" id="third">3</div>
         <div class="fchild" id="fourth">4</div>
+    </div>
+
+    <div class="grid">
+        <div class="grid-child" id="g1">1</div>
+        <div class="grid-child" id="g2">2</div>
+        <div class="grid-child" id="g3">3</div>
+        <div class="grid-child" id="g4">4</div>
     </div>
 </body>
 </html>
