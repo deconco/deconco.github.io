@@ -1,0 +1,19 @@
+#narrowScreen{
+    background-color: green;
+}
+#wideScreen{
+
+}
+#shortScreen{
+
+}
+#tallScreen{
+
+}
+
+@media screen and (max-width: 600px) {
+    #narrowScreen {
+        background-color: purple;
+    }
+}
+
