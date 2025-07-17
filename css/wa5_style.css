@@ -9,7 +9,7 @@
   body {
     margin: 0;
     font-size: 10px;
-    background: url(../img/claire.jpg) no-repeat left top;
+    background-image: url(../img/claire.jpg) no-repeat left top;
   }
 
 
