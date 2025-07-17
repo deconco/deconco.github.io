@@ -24,14 +24,16 @@ h2 {
 .dog_breed {
   align-items: left;
   border: 2mm dotted white;
-  color:blue;
+  color: white;
   float: right;
-  background-color: navy;
+  background-color: rgb(0, 0, 128, 0.5);
 }
 
+
 .dog_info  {
-    border: 3mm solid red;
+    border: 1mm solid red;
     align-items: center;
-    float: bottom;
+    position: absolute;
+    color: white;
     background-color: blue;
 }
