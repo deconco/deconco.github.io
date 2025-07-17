@@ -33,7 +33,7 @@ h2 {
 .dog_info  {
     border: 1mm solid red;
     align-items: center;
-    position: absolute;
+    position: bottom;
     color: white;
     background-color: blue;
 }
