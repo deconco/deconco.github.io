@@ -2,13 +2,13 @@
     background-color: green;
 }
 #wideScreen{
-
+    background-color: red;
 }
 #shortScreen{
-
+    background-color: turquoise;
 }
 #tallScreen{
-
+    background-color: lavender;
 }
 
 @media screen and (max-width: 600px) {
@@ -17,3 +17,20 @@
     }
 }
 
+@media screen and (min-width: 800px) {
+    #wideScreen {
+        background-color: lightblue;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #wideScreen {
+        background-color: lightblue;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #wideScreen {
+        background-color: lightblue;
+    }
+}
