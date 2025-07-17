@@ -9,6 +9,7 @@ h1 {
 
 h2 {
     font-size: 2em;
+    font-style: italic;
 }
   
 article {
@@ -16,10 +17,12 @@ article {
 }
 
 article .dog_info  {
+    border: 3mm solid red;
     align-items: center;
 }
 
 article .dog_breed {
     align-items: left;
+    border: 5mm dotted blue;
 
 }
