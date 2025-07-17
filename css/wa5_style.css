@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    background: url(../img/claire.jpg) no-repeat left top;
+  }
+
+h1 {
+    font-size: large;
+}
+
+h2 {
+    font-size: medium;
+}
+  
+
+.dog_info article {
+    align-items: center;
+}
+
+.dog_breed article {
+    align-items: left;
+
+}
