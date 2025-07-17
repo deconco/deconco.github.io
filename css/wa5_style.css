@@ -1,6 +1,7 @@
 body {
     font-size: 10px;
     margin: 0;
+    background: url(../img/claire.jpg) no-repeat;
   }
 
 h1 {
@@ -12,10 +13,6 @@ h2 {
     font-style: italic;
 }
   
-article {
-    background: url(../img/claire.jpg) no-repeat left top;
-}
-
 .dog_info  {
     border: 3mm solid red;
     align-items: center;
