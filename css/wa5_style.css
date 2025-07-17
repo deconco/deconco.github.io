@@ -15,11 +15,11 @@ article {
     background: url(../img/claire.jpg) no-repeat left top;
 }
 
-.dog_info article {
+article .dog_info  {
     align-items: center;
 }
 
-.dog_breed article {
+article .dog_breed {
     align-items: left;
 
 }
