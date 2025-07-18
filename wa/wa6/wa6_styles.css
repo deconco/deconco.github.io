@@ -35,13 +35,13 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    flex: 1;
   }
   
   nav a {
     color: #fff;
     text-decoration: none;
     padding: .5em 1em;
-    flex: 1;
   }
   
   .photos {
