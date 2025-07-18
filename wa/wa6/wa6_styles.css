@@ -22,23 +22,26 @@ body {
     padding: 0 20px;
     max-width: 980px;
 
+  }
+
+  #my_grid {
     display: grid;
     grid-template-columns: 2;
-    grid-template-rows: 1;
+    grid-template-rows: 4;
   }
   
   #article1 {
     grid-row-start: 0;
     grid-row-end: 1;
     grid-column-start: 0;
-    grid-column-end: 1;
+    grid-column-end: 3;
   }
 
   #aside1 {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 0;
-    grid-column-end: 1;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 4;
   }
 
   nav {
@@ -51,14 +54,17 @@ body {
     padding: 0;
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  nav li {
+    flex: 1;
   }
   
   nav a {
     color: #fff;
     text-decoration: none;
     padding: .5em 1em;
-    flex: 1;
   }
   
   .photos {
