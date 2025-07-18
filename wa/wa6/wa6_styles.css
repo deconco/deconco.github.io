@@ -57,3 +57,7 @@ body {
   aside {
     float: right;
   }
+
+  p {
+    display: inline;
+  }
