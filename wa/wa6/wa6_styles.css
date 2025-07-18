@@ -53,3 +53,7 @@ body {
   .feature {
       width: 200px;
   }
+
+  aside {
+    float: right;
+  }
