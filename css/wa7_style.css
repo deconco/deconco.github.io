@@ -1,36 +1,128 @@
+h1 {
+    font-weight: bolder;
+    color: white;
+}
+
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: black;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bold;
 }
+
 nav{
-    height: 50vh;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    height:20px;
-    background-color: blueviolet;
+    height: 50px;
+    background-color: black;
 }
+
+
 nav a{
     width:10vw;
     text-align: center;
-    text-decoration: none;
-    color:black;
+    border: 5px solid white;
+    color:white;
+    padding-top: 10px;
+    transition-property: color;
+    transition-duration: 1.5s;
 }
 
-
-img{
-    width:30vw;
-    height: 30vh;
+nav a:hover {
+    color: red;
 }
 
-#blue-ball{
-    background-color: blue;
+#history {
+    padding-top: 3px;
+}
+
+#orange-ball{
+    background-color: orange;
     width: 20px;
-    height:20px;
+    height: 20px;
     border-radius: 50%;
     position: absolute;
     left:5vw;
-    top:0;
+    top:5vw;
+    transition: opacity 0.5s;
 }
+
+#orange-ball:hover {
+    opacity: 0;
+}
+
+#pumpkin {
+    width: 30vw;
+    height: 45vh;
+    padding: 10px;
+    position: absolute;
+    top: 11vw;
+}
+
+
+#glow {
+    background-color: yellow;
+    width: 25vw;
+    height: 28vh;
+    position: absolute;
+    top: 18vw;
+    border-radius: 30px;
+    animation-name: flicker;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flicker {
+    from {
+        opacity: 0.5;
+    }
+    15% {
+        opacity: 0.3;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+#witch {
+    width: 50px;
+    height: 40px;
+}
+
+#flyer {
+    position: absolute;
+    bottom: 0.5vw;
+    animation-name: zoom;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zoom {
+    from {
+        translate: initial; /* starting point*/
+    }
+    49.9% {
+        translate: -100vw 0.5vw; /* off screen left*/
+    }
+    50% {
+        translate: 100vw 0.5vw; /* off screen right*/
+    }
+    to {
+        translate: initial; /* starting point*/
+    }
+}
+
