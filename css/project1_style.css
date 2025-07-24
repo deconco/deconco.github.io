@@ -1,6 +1,201 @@
 body {
+    background-color: rgb(2, 2, 77);
+    color:rgb(184, 124, 241);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+hr {
+    color:rgb(184, 124, 241);
+}
+
+nav a:hover {
+    color: rgb(184, 124, 241);
+}
+
+h3 {
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+h3:hover {
+    color: white;
+}
+
+.artist {
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+.artist:hover {
+    color: white;
+}
+
+.venue {
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
+    background-color: white;
+    color:rgb(2, 2, 77);
+    line-height: 150%;
+    padding: 2px;
 
 }
-.concert_info {
-    font-style:;
+
+.venue:hover {
+    color: white;
+    background-color: rgb(184, 124, 241);
+}
+
+@media screen and (min-width: 400px){
+    
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    nav {
+        display:grid;
+        grid-template-columns: 2;
+        grid-template-rows: 5;
+        justify-content: center;
+        height: 1060px;
+        background-color: blue;
+    }
+
+    #a {
+        grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    }
+
+    #b {
+        grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    }
+
+    #c {
+        grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    }
+
+    #d {
+        grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    }
+
+    #e {
+        grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    }
+
+    #f {
+        grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    }
+
+    #g {
+        grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    }
+
+    #h {
+        grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    }
+
+    #i {
+        grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    }
+
+    #j {
+        grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    }
+    
+    nav a{
+        text-align: center;
+        color:white;
+        padding-top: 5px;
+        transition-property: color;
+        transition-duration: 1.5s;
+        font-size: 20px;
+    }
+    
+    
+    img {
+        width: 130px;
+        height: 130px;
+        padding: 20px;
+    }    
+
+}
+
+@media screen and (min-width: 1500px) {
+    h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    nav {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 160px;
+        background-color: blue;
+        
+    }
+    
+    nav a{
+        width:10vw;
+        text-align: center;
+        border: 5px solid white;
+        color:white;
+        transition-property: color;
+        transition-duration: 1.5s;
+    }
+    
+    
+    img {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }    
+
 }
