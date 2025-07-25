@@ -202,11 +202,11 @@ p {
         position: sticky;
         border: 5px solid white;
         float: right;
-        margin-right: 20px;
         top: 20px;
         opacity: 0.5;
         transition: opacity;
         transition-duration: 0.5s;
+        margin: 5px;
     }
 
     #to_top:hover {
