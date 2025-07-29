@@ -1,4 +1,5 @@
-const btn = document.querySelector("button");  // picks the first instance of this thing
+/*
+const btn = document.querySelector(".gothButton");  // picks the first instance of this thing
 btn.addEventListener('click', updateName);
 
 function updateName() {
@@ -31,9 +32,16 @@ function updateName() {
         btn.setAttribute("style", `position : relative; top:${top}; left ${left};`)
     }
 */
-const bt2 = document.querySelector("p");
+const bt2 = document.querySelector("#button2");
 bt2.addEventListener('click', colorBtn);
 
 function colorBtn() {
-    bt2.setAttribute("style", "background-color: red;")
+    bt2.setAttribute("style", "background-color: purple;")
+}
+
+const bt3 = document.querySelector("#size");
+bt3.addEventListener('click', bigBtn);
+
+function bigBtn() {
+    bt3.setAttribute("style", "font-size: 45px; height: auto;")
 }
