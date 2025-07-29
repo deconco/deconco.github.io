@@ -1,0 +1,40 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    width: 500px;
+    margin: auto;
+    background-color: #bfeef3;
+  }
+
+  label {
+    color: #173282;
+    font-size: larger;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  button {
+    color: #173282;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+  }
+
+  div {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    width: 190px;
+  }
+
+  p {
+    background: #173282;
+    color: #56c9d5;
+    padding: 10px;
+    visibility: hidden;
+    border: 4px solid #56c9d5;
+    font-size: 30px;
+
+  }

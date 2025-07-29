@@ -1,4 +1,3 @@
-
 const bt2 = document.querySelector("#button2");
 bt2.addEventListener('click', colorBtn);
 
