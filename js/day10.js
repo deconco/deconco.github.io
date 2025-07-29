@@ -10,7 +10,7 @@ function updateName() {
 //const picture = document.querySelector("img");
 //picture.addEventListener('click', updateImage);
 
-/*function updateImage() {
+function updateImage() {
     const pic = prompt("Should this image change to flowers?");
     if(pic == 'yes')
     {
@@ -31,7 +31,8 @@ function updateName() {
 
         btn.setAttribute("style", `position : relative; top:${top}; left ${left};`)
     }
-*/
+*/ 
+
 const bt2 = document.querySelector("#button2");
 bt2.addEventListener('click', colorBtn);
 
