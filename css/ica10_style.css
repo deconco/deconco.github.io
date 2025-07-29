@@ -1,0 +1,19 @@
+button {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+            text-transform: lowercase;
+            border: 2px solid gray;
+            background-color: black;
+            color: white;
+            box-shadow: 1px 1px 2px black;
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+            height: 50px;
+            width: auto;
+            margin: 10px;
+}
+
+p {
+    cursor: pointer;
+}
