@@ -41,6 +41,7 @@
         }
     </style>
 </head>
+
 <body>
     <button>Display message box</button>
 
@@ -54,12 +55,12 @@
         
         
     
-        function displayMessage(msgText, msgType) {
+        function displayMessage() {
             const body = document.body;  // grabs the body of the html
 
                   
             // edit "" when we click the button and run it, it generates two prompts - one for message and one for message type
-            let msgText = prompt("Enter yout message here.");
+            let msgText = prompt("Enter your message here.");
             let msgType = prompt("Enter your message type (warning or chat).");
             
             const panel = document.createElement("div"); // makes a div appear on our screen
