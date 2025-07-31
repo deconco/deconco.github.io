@@ -10,11 +10,11 @@ const images = ['pic1.jpg', `pic2.jpg`, `pic3.jpg`, `pic4.jpg`, `pic5.jpg`];
 /* Declaring the alternative text for each image file */
 // const altArr = ["close up on an eye", "some sort of rock formation", "purple flowers", "Egyptian wall art", "a butteryfly on a leaf"];
 const alts = {
-    'pic1.jpg' : 'close up on an eye',
-    'pic2.jpg' : 'some sort of rock formation',
-    'pic3.jpg' : 'purple flowers',
-    'pic4.jpg' : 'Egyptian wall art',
-    'pic5.jpg' : 'a butterfly on a leaf'
+    'pic1.jpg' : 'pomeranian',
+    'pic2.jpg' : 'dalmation',
+    'pic3.jpg' : 'pitbull terrier',
+    'pic4.jpg' : 'border collie',
+    'pic5.jpg' : 'golden retriever'
   }
 
 /* Looping through images */
