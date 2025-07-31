@@ -46,3 +46,19 @@ btn.addEventListener('click', () =>
       }
     }
 );
+
+const pbtn = document.querySelector('#pbtn');
+pbtn.addEventListener('click', () =>
+{
+    if (pbtn.getAttribute("class") === "normal") {
+        pbtn.setAttribute("class", "purple");
+        pbtn.textContent = "Normal-ify";
+        overlay.style.backgroundColor = "rgba(79, 0, 128, 0.397)";
+    }
+    else {
+        pbtn.setAttribute('class','normal');
+        pbtn.textContent = 'Purple-ify';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+      }
+    }
+); 
