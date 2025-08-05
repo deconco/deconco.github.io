@@ -16,19 +16,14 @@ html {
   }
   
   .app {
+    top: 100px;
+    margin: auto;
     position: relative;
-    top: 300px;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 600px;
     background-color: white;
     border-radius: 5px;
     border: 5px solid black;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-  }
-
-  div {
-    position: relative;
   }
   
   header {
@@ -41,7 +36,6 @@ html {
   
   .quotes {
     padding: 20px 50px;
-    min-height: 200px;
   }
   
   .quote-text {
@@ -94,12 +88,12 @@ html {
   }
 
   footer {
+    position: sticky;
     font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
     border: 3px solid black;
     border-radius: 5px;
-    position:absolute;
     bottom: 2px;
     margin-bottom: 30px;
     margin-left: 30px;
@@ -113,7 +107,6 @@ img {
   width: 500px;
   height: auto;
   margin-top: 20px;
-  justify-content: center;
 }
   
   @media screen and (max-width: 600px) {
