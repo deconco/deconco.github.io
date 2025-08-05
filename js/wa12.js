@@ -19,6 +19,8 @@ let json = ''; // this makes json a global variable which means we can change it
 async function getQuote() {
     const answerArea = document.querySelector("#js-answer-text");
     answerArea.textContent = '';
+    const catArea = document.querySelector("#cat-image");
+    catArea.innerHTML = "";
     //console.log("testing getQuote");   //test that it works!
     
     try {
@@ -85,7 +87,7 @@ async function getCat() {
 // pass the url we fetched, make a new image with that url as the source,
 // and then append it to the area in the document where I want it to show up
 function displayCat(url) {
-    const catSource = json.url;
+    const catSource = url;
     const catArea = document.querySelector("#cat-image");
     const newImage = document.createElement('img');
     newImage.setAttribute('src', catSource);
