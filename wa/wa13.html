@@ -9,6 +9,49 @@
 <body>
     
     <script>
+
+        // our employee class + a constructor with required attributes
+        class Employee {
+            constructor(fname, dept, desig, salary, raise_eligible) {
+                this.fname = fname;
+                this.dept = dept;
+                this.desig = desig;
+                this.salary = salary;
+                this.raise_eligible = raise_eligible;
+            }
+        }
+
+        class Company {
+            constructor(companyName, website, employees) {
+                this.companyName = companyName;
+                this.website = website;
+                this.employees = employees;
+            }
+        }
+
+        // 1
+        // make an empty array for our employees to go into
+        const emps = [];
+
+        // make each employee
+        Employee a = new Employee("Sam", "Tech", "Manager", 40000, true);
+        Employee b = new Employee("Mary", "Finance", "Trainee", 18500, true);
+        Employee c = new Employee("Bill", "HR", "Executive", 21200, false);
+
+        // add our employees to the array
+        emps.push(a);
+        emps.push(b);
+        emps.push(c);
+
+        // output to log
+        console.log(emps);
+        
+        //2
+        Company myCompany = new Company("Tech Stars", "ww.techstars.site", emps);
+        
+        
+        
+        
         // nothing should appear on the page itself, only output to the console 
         // Problem 1
         console.log("Answer to problem 1 goes here");
