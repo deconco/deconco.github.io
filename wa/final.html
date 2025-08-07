@@ -12,19 +12,46 @@
         canvas {
             width: 900px;
             height: auto;
+            margin: auto;
+        }
+        button {
+            margin: auto;
+            color: white;
+            border-radius: 4px;
+            border: 5px solid black;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+            width: 20%;
+            font-size: 20px;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+        }
+
+        #spin {
+            display: block;
+            width: 50%;
+            background-color: aqua;
+        }
+
+        #submit {
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <h1>Enter your phone number!</h1>
     <canvas></canvas>
-    <button>SPIN</button>
+    <button id="spin">SPIN</button>
     <div>
         <button>Log Digit</button>
         <button>Delete Last Digit</button>
         <button>Clear</button>
     </div>
-    <button>Submit</button>
+    <button id="submit">Submit</button>
 
     <script>
         const canvas = document.querySelector("canvas");
@@ -57,18 +84,18 @@
 
         }
 
-        const slice1 = new Slice(900, 500, "red", 350, 0, (Math.PI)/6);
-        const slice2 = new Slice(900, 500, "green", 350, (Math.PI)/6, (Math.PI)/3);
-        const slice3 = new Slice(900, 500, "blue", 350, (Math.PI)/3, (Math.PI)/2);
-        const slice4 = new Slice(900, 500, "yellow", 350, (Math.PI)/2, (2*Math.PI)/3);
-        const slice5 = new Slice(900, 500, "purple", 350, (2*Math.PI)/3, (5*Math.PI)/6);
-        const slice6 = new Slice(900, 500, "orange", 350, (5*Math.PI)/6, (Math.PI));
-        const slice7 = new Slice(900, 500, "black", 350, (Math.PI), (7*Math.PI)/6);
-        const slice8 = new Slice(900, 500, "olive", 350, (7*Math.PI)/6, (4*Math.PI)/3);
-        const slice9 = new Slice(900, 500, "fuchsia", 350, (4*Math.PI)/3, (3*Math.PI)/2);
-        const slice10 = new Slice(900, 500, "maroon", 350, (3*Math.PI)/2, (10*Math.PI)/6);
-        const slice11 = new Slice(900, 500, "lime", 350, (10*Math.PI)/6, (11*Math.PI)/6);
-        const slice12 = new Slice(900, 500, "aqua", 350, (11*Math.PI)/6, (2*Math.PI));
+        const slice1 = new Slice(900, 370, "red", 350, 0, (Math.PI)/6);
+        const slice2 = new Slice(900, 370, "green", 350, (Math.PI)/6, (Math.PI)/3);
+        const slice3 = new Slice(900, 370, "blue", 350, (Math.PI)/3, (Math.PI)/2);
+        const slice4 = new Slice(900, 370, "yellow", 350, (Math.PI)/2, (2*Math.PI)/3);
+        const slice5 = new Slice(900, 370, "purple", 350, (2*Math.PI)/3, (5*Math.PI)/6);
+        const slice6 = new Slice(900, 370, "orange", 350, (5*Math.PI)/6, (Math.PI));
+        const slice7 = new Slice(900, 370, "black", 350, (Math.PI), (7*Math.PI)/6);
+        const slice8 = new Slice(900, 370, "olive", 350, (7*Math.PI)/6, (4*Math.PI)/3);
+        const slice9 = new Slice(900, 370, "fuchsia", 350, (4*Math.PI)/3, (3*Math.PI)/2);
+        const slice10 = new Slice(900, 370, "maroon", 350, (3*Math.PI)/2, (10*Math.PI)/6);
+        const slice11 = new Slice(900, 370, "lime", 350, (10*Math.PI)/6, (11*Math.PI)/6);
+        const slice12 = new Slice(900, 370, "aqua", 350, (11*Math.PI)/6, (2*Math.PI));
         slice1.draw();
         slice2.draw();
         slice3.draw();
