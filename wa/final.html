@@ -67,9 +67,14 @@
         const height = (canvas.height = window.innerHeight);
 
 
-        //class Spinner {
-        //    constructor(x, y, )
-        //}
+        class Spinner {
+            constructor(x, y, size)
+            {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+            }
+        }
 
         class Slice {
             constructor(x, y, color, size, startAngle, endAngle) {
