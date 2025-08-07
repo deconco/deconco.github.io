@@ -19,7 +19,7 @@
 
         button {
             margin: auto;
-            color: white;
+            color: black;
             border-radius: 4px;
             border: 5px solid black;
             padding: 10px 20px;
@@ -30,11 +30,13 @@
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
         }
 
-        #spin {
+        #spinb {
             display: block;
             width: 50%;
             background-color: aqua;
         }
+
+        #spinner
 
         #submit {
             display: block;
@@ -49,7 +51,7 @@
 <body>
     <h1>Enter your phone number!</h1>
     <canvas></canvas>
-    <button id="spin">SPIN</button>
+    <button id="spinb">SPIN</button>
     <br>
 
     <div>
@@ -68,11 +70,20 @@
 
 
         class Spinner {
-            constructor(x, y, size)
-            {
+            constructor(x, y, size) {
                 this.x = x;
                 this.y = y;
                 this.size = size;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                ctx.fillStyle = this.color;
+            }
+
+            spin() {
+
             }
         }
 
@@ -93,9 +104,14 @@
                 ctx.arc(this.x, this.y, this.size, this.startAngle, this.endAngle);
                 ctx.fill();
             }
+        
+        class Wheel {
+            constructor(x, y, size, numSlices)
+        }
 
         }
 
+        // initial set up 
         const slice1 = new Slice(900, 370, "red", 350, 0, (Math.PI)/6);
         const slice2 = new Slice(900, 370, "green", 350, (Math.PI)/6, (Math.PI)/3);
         const slice3 = new Slice(900, 370, "blue", 350, (Math.PI)/3, (Math.PI)/2);
@@ -120,6 +136,13 @@
         slice10.draw();
         slice11.draw();
         slice12.draw();
+
+        // spinner.spin();
+        // number to log == ""
+        // if log is hit, reset to initial set up
+        // if log is not hit, remove the current slice
+
+
     </script>
 </body>
 </html>
