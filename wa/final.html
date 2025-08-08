@@ -67,10 +67,17 @@
         const ctx = canvas.getContext("2d");
         const width = (canvas.width = window.innerWidth);
         const height = (canvas.height = window.innerHeight);
+        const phoneNumber = "";
+        const spin_button = document.querySelector("#spinb");
+
+        spin_button.addEventListener('click', () =>
+        {
+            // make the spinner spin once, and add the number it lands on to the phone number
+        })
 
 
         class Spinner {
-            constructor(x, y, size) {
+            constructor(x, y) {
                 this.x = x;
                 this.y = y;
                 this.size = size;
@@ -79,13 +86,18 @@
             draw() {
                 ctx.beginPath();
                 ctx.moveTo(this.x, this.y);
-                ctx.fillStyle = this.color;
+                ctx.lineTo(this.x + 100, this.y);
+                ctx.lineWidth = 15;
+                ctx.stroke();
             }
 
             spin() {
 
             }
         }
+
+        mySpinner = new Spinner{900, 370};
+        mySpinner.draw();
 
         class Slice {
             constructor(x, y, color, size, startAngle, endAngle) {
@@ -105,10 +117,18 @@
                 ctx.fill();
             }
         
-        class Wheel {
-            constructor(x, y, size, numSlices)
-        }
+        /*class Wheel {
+            constructor(x, y, size, numSlices) {
+                this.x = x;
+                this.y = y;
+                this.numSlices = numSlices;
+            }
 
+            draw() {
+                
+            }
+        }
+*/
         }
 
         // initial set up 
@@ -137,12 +157,7 @@
         slice11.draw();
         slice12.draw();
 
-        // spinner.spin();
-        // number to log == ""
-        // if log is hit, reset to initial set up
-        // if log is not hit, remove the current slice
-
-
+        
     </script>
 </body>
 </html>
