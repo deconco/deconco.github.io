@@ -11,11 +11,10 @@
         }
 
         canvas {
-            width: 750px;
-            
-            position: absolute;
-            left: 20%;
+            width: 600px;
+            height: auto;
             display: block;
+            margin: auto;
         }
 
         button {
@@ -35,7 +34,7 @@
             display: block;
             width: 50%;
             background-color: aqua;
-            margin-top: 500px;
+            margin-top: 20px;
             transition: background-color, 0.5s;
         }
 
@@ -87,14 +86,19 @@
     <button id="submit">Submit</button>
 
     <script>
-        const canvas = document.querySelector("canvas");
+        const canvas = document.querySelector("#wheel");
         const ctx = canvas.getContext("2d");
         const width = (canvas.width = window.innerWidth);
         const height = (canvas.height = window.innerHeight);
         const phoneNumber = "";
         const spin_button = document.querySelector("#spinb");
-        const myWheel = document.querySelector("#wheel");
+        //const myWheel = document.querySelector("#wheel");
 
+        var radians = 0;
+        var maxSpeed = 0.2;
+        var currentSpeed = 0;
+        var radiansUntilStop = 47.8;
+        var spin = false;
         
         //{
             // make the spinner spin once, and add the number it lands on to the phone number
@@ -118,7 +122,7 @@
                 ctx.fill();
             }
         }
-        
+        /*
         class Picker {
             constructor(x, y) {
                 this.x = x;
@@ -136,21 +140,23 @@
             }
         }
         const picker = new Picker(400, 0);
-
+*/
+        var xcord = canvas.width / 2;
+        var ycord = canvas.height / 2;
         // initial set up 
-        const slice1 = new Slice(375, 370, "red", 350, 0, (Math.PI)/6);
-        const slice2 = new Slice(375, 370, "green", 350, (Math.PI)/6, (Math.PI)/3);
-        const slice3 = new Slice(375, 370, "blue", 350, (Math.PI)/3, (Math.PI)/2);
-        const slice4 = new Slice(375, 370, "yellow", 350, (Math.PI)/2, (2*Math.PI)/3);
-        const slice5 = new Slice(375, 370, "purple", 350, (2*Math.PI)/3, (5*Math.PI)/6);
-        const slice6 = new Slice(375, 370, "orange", 350, (5*Math.PI)/6, (Math.PI));
-        const slice7 = new Slice(375, 370, "black", 350, (Math.PI), (7*Math.PI)/6);
-        const slice8 = new Slice(375, 370, "olive", 350, (7*Math.PI)/6, (4*Math.PI)/3);
-        const slice9 = new Slice(375, 370, "fuchsia", 350, (4*Math.PI)/3, (3*Math.PI)/2);
-        const slice10 = new Slice(375, 370, "maroon", 350, (3*Math.PI)/2, (10*Math.PI)/6);
-        const slice11 = new Slice(375, 370, "lime", 350, (10*Math.PI)/6, (11*Math.PI)/6);
-        const slice12 = new Slice(375, 370, "aqua", 350, (11*Math.PI)/6, (2*Math.PI));
-        slice1.draw();
+        const slice1 = new Slice(xcord, ycord, "red", 350, 0, (Math.PI)/6);
+        const slice2 = new Slice(xcord, ycord, "green", 350, (Math.PI)/6, (Math.PI)/3);
+        const slice3 = new Slice(xcord, ycord, "blue", 350, (Math.PI)/3, (Math.PI)/2);
+        const slice4 = new Slice(xcord, ycord, "yellow", 350, (Math.PI)/2, (2*Math.PI)/3);
+        const slice5 = new Slice(xcord, ycord, "purple", 350, (2*Math.PI)/3, (5*Math.PI)/6);
+        const slice6 = new Slice(xcord, ycord, "orange", 350, (5*Math.PI)/6, (Math.PI));
+        const slice7 = new Slice(xcord, ycord, "black", 350, (Math.PI), (7*Math.PI)/6);
+        const slice8 = new Slice(xcord, ycord, "olive", 350, (7*Math.PI)/6, (4*Math.PI)/3);
+        const slice9 = new Slice(xcord, ycord, "fuchsia", 350, (4*Math.PI)/3, (3*Math.PI)/2);
+        const slice10 = new Slice(xcord, ycord, "maroon", 350, (3*Math.PI)/2, (10*Math.PI)/6);
+        const slice11 = new Slice(xcord, ycord, "lime", 350, (10*Math.PI)/6, (11*Math.PI)/6);
+        const slice12 = new Slice(xcord, ycord, "aqua", 350, (11*Math.PI)/6, (2*Math.PI));
+        /*slice1.draw();
         slice2.draw();
         slice3.draw();
         slice4.draw();
@@ -161,11 +167,50 @@
         slice9.draw();
         slice10.draw();
         slice11.draw();
-        slice12.draw();
+        slice12.draw(); */
 
         let slicesArray = [slice1, slice2, slice3, slice4, slice5, slice6, slice7, slice8, slice9, slice10, slice11, slice12];
-        picker.draw();
+        //picker.draw();
 
+        // draw the wheel!!
+        function drawWheel(){
+            for (const slice of slicesArray) {
+                slice.draw();
+            }
+        }
+            
+        drawWheel();
+
+        spin_button.addEventListener('click', randomSpin);
+
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        
+        
+        function turn() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.translate(xcord, ycord);
+            ctx.rotate((45 * Math.PI) / 180); 
+            ctx.translate(-1 * xcord, -1 * ycord);
+            drawWheel();
+            
+
+            // turn * 8 = a full spin
+        }
+
+        function randomSpin() {
+            let spinAmount = random(8, 48);
+            while (spinAmount > 0) {
+                turn();
+                spinAmount--;
+                //requestAnimationFrame(randomSpin);
+            }
+            
+        }
+       
+    
         /*
         function loop {
             for (const slice of slicesArray) {
@@ -178,16 +223,73 @@
         loop();
         */
 
+        /*
         spin_button.addEventListener('click', spinWheel);
 
         function spinWheel () {
-            if(myWheel.classList[0] === "spin") {
-                myWheel.classList.remove("spin");
-                console.log("x");
+            spin = true;
+            currentSpeed = maxSpeed;
+        }
+
+        function update() {
+            if (radians >= radiansUntilStop) {
+                radians = radiansUntilStop;
+                spin = false;
             }
-            myWheel.classList.add("spin");
+            if (spin === true) {
+                radians += currentSpeed;
+            }
+            debug();
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.arc(canvas.width/2, canvas.height/2, 150, 0, Math.PI * 2);
+            for (let i = 0; i < Math.PI * 2; i += Math.PI * 0.5) {
+                let fill = i === 0 ? true : false;
+                drawWheelSection(150, 0, radians + i, fill);
+            }
+        }
+
+        function loop() {
+            window.requestAnimationFrame(loop);
+            update();
+            draw();
+        }
+
+        loop();
+
+        function drawWheelSection(center, radius, wheelRadians, fill = false) {
+            ctx.beginPath();
+            ctx.moveTo(center, center);
+            ctx.arc(center, center, 140, 0 + wheelRadians, Math.PI * 0.5 + wheelRadians);
+            ctx.lineTo(center, center);
+            
+            if(fill === true) {
+                ctx.fillStyle = "blue";
+                ctx.fill();
+            }
+            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(140, 0);
+            ctx.lineTo(150, 30);
+            ctx.lineTo(160, 0);
+            ctx.closePath();
+  
+            ctx.fillStyle = 'red';
+            ctx.fill();
+            ctx.stroke();
 
         }
+
+        function debug() {
+            document.querySelector('#radians').innerHTML = radians;
+            document.querySelector('#speed').innerHTML = currentSpeed;
+        }
+        */
+
     </script>
 </body>
 </html>
